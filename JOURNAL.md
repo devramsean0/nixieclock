@@ -42,3 +42,34 @@ Who doesn't like a diagram :P
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MjM3LCJwdXIiOiJibG9iX2lkIn19--b9577817b0fae970d7104fd4274ce0365d2db253/image.png)
   
 
+## 10/5/2025 - Designed the RP2040 Schematic  
+
+So, Since we are building around the RP2040, the first step is to build that onto the PCB.
+I didn't want to use the pico W for space constraints, and I think doing it onboard makes it a more complex and interesting project.
+
+Step 1 was to place the actual RP2040 electronics on the board, for this I used the example schematic as a base.
+
+### Modifications to the base
+#### Voltage Regulator
+Since the USB PD voltage is at ~~20v~~ 12v, we need a regulator that can regulate that down to 3V3 (I wanted 20v but I couldn't get a regulator for that, so we are going with 12v. Shouldn't make too much of a difference)
+
+The typical circuit looks like this:
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NTIxLCJwdXIiOiJibG9iX2lkIn19--5822e72860b8a94c746378e1b8f0c6769f49aaf7/image.png)
+
+Basically just different capacitor values :D
+
+#### USB PD
+I went for the HUSB238 series of PD chip, because they are easily accessible. Additionally they are often used by Adafruit, so there's a wide selection of examples.
+
+And, about an hour and a half later I have this monstrosity.
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NTMxLCJwdXIiOiJibG9iX2lkIn19--8bc1772bb541f48ed6dd8d7d892846d7cb8ea956/image.png)
+
+# Somewhat finished Microcontroller core
+After another (heavily disrupted) half an hour of copying and modifying the design, I got left with this:
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NTg0LCJwdXIiOiJibG9iX2lkIn19--162039143a4e24dbdc9ad6b884627c0d2c08efa9/image.png)
+
+You'll notice there's no GPIO connected yet, or wireless stuff or even a buzzer but those will come next time. I want to work on the high voltage power stuff now :P
+
+
+  
+
