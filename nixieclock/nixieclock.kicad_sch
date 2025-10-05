@@ -1,0 +1,102 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "36f98e0b-03c8-47d1-9b6f-a29babd2cb0f")
+	(paper "A4")
+	(title_block
+		(title "Nixie Clock")
+		(company "Sean Outram")
+	)
+	(lib_symbols)
+	(sheet
+		(at 46.99 12.7)
+		(size 35.56 22.86)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "43574280-2a0c-4888-8270-6d76e7e79f2b")
+		(property "Sheetname" "RP2040"
+			(at 46.99 11.9884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "rp2040.kicad_sch"
+			(at 46.99 36.1446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "nixieclock"
+				(path "/36f98e0b-03c8-47d1-9b6f-a29babd2cb0f"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 12.7 12.7)
+		(size 33.02 22.86)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "ffc627ec-e4cb-4bbf-b62f-be5668cd21bf")
+		(property "Sheetname" "Power"
+			(at 12.7 11.9884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power.kicad_sch"
+			(at 12.7 36.1446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "nixieclock"
+				(path "/36f98e0b-03c8-47d1-9b6f-a29babd2cb0f"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
