@@ -3423,7 +3423,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "0822a4d1-5f4e-4614-abfb-a1a10a842dd0")
+		(uuid "0822a4d1-5f4e-4614-abfb-a1a10a842dd1")
 	)
 	(label "QSPI_SD1"
 		(at 39.37 172.72 0)
@@ -3443,7 +3443,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "0a2ece03-dd18-4061-90fa-fafd50c57408")
+		(uuid "0a2ece03-dd18-4061-90fa-fafd50c57409")
 	)
 	(label "QSPI_SCLK"
 		(at 38.1 167.64 0)
@@ -3453,7 +3453,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "0a2ece03-dd18-4061-90fa-fafd50c57408")
+		(uuid "0a2ece03-dd18-4061-90fa-fafd50c5740a")
 	)
 	(label "QSPI_SS"
 		(at 40.64 165.1 0)
@@ -3463,7 +3463,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "0a2ece03-dd18-4061-90fa-fafd50c57408")
+		(uuid "0a2ece03-dd18-4061-90fa-fafd50c5740b")
 	)
 	(label "QSPI_SD3"
 		(at 39.37 177.8 0)
@@ -3473,7 +3473,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "0a2ece03-dd18-4061-90fa-fafd50c57408")
+		(uuid "0a2ece03-dd18-4061-90fa-fafd50c5740c")
 	)
 	(label "QSPI_SD2"
 		(at 39.37 175.26 0)
@@ -3483,7 +3483,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "0a2ece03-dd18-4061-90fa-fafd50c57408")
+		(uuid "0a2ece03-dd18-4061-90fa-fafd50c5740d")
 	)
 	(label "QSPI_SD2"
 		(at 60.96 76.2 0)
