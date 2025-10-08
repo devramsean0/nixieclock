@@ -73,3 +73,38 @@ You'll notice there's no GPIO connected yet, or wireless stuff or even a buzzer 
 
   
 
+## 10/8/2025 - Designed the High Voltage generator  
+
+I had a few goals in mind for the HV generation:
+- Be low part count
+- Be Safe
+- Be compact
+
+To achieve the safety aspects of the design, I set a few hard rules.
+- Anything higher than 12v stays to one side of the board, behind the tubes and opposite to the controls.
+- A 3D printed cover would go on-top of the generation components
+- I would build in a voltmeter controlled by the RP2040 so that the tubes are only electrified if safe & stable if it's possible with few parts.
+
+I chose to base my boost converter on [this tutorial](http://electronoobs.com/eng_circuitos_tut57.php) as it appears relatively simple, and can output enough current.
+
+If we look at the [datasheet for the MAX1771ESA+T](https://www.analog.com/media/en/technical-documentation/data-sheets/MAX1771.pdf)
+
+We are particularly interested in the voltage regulator that connects to the FB pin, as this sets the output voltage.
+
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTAzMCwicHVyIjoiYmxvYl9pZCJ9fQ==--5ef52a5fc4731032e71ce3e75b7ad75d839dcffa/image.png)
+
+R2 = (10000)((170 / 1.5v) - 1)
+Set R1 to 10k (to give us an easy number, so R2 = 1123333.333Ω = 1.123333 MΩ
+If we set R2 to 13k, R2 = 1460333.333Ω = 1.460333 MΩ
+
+But if I want to use a 1.3M ohm resistor for R2 (because it's easy accessible on LCSC) I need to solve the equation for R1:
+R1 ​= (R2 / (1.5/ 170) ​− 1)
+R1 = (1300000 / (1.5 / 170) - 1)
+R1 = 11572.7003Ω = 11.5727 kΩ, so to get as close as possible, I'll put an 11k potentiometer on R1
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTAzNiwicHVyIjoiYmxvYl9pZCJ9fQ==--da70603563e31165d69ab358a394fcf4651e7090/image.png)
+
+I did have to scrap the voltmeter though, as it would have complicated the circuitry with voltage dividers and such, and had the potential to damage the rp2040 if my voltage divider didn't bring it down into range of the pico's ADC.
+
+
+  
+
