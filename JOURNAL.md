@@ -108,3 +108,31 @@ I did have to scrap the voltmeter though, as it would have complicated the circu
 
   
 
+## 10/11/2025 - Designed the Tube Schematic  
+
+I've chosen to use the [nixies.us](https://github.com/judge2005/Eagle-and-KiCAD-Nixie-Libs) library for the headers. These are well tested and it saves me trying to read placement information from an old soviet datasheet. This is included as a git submodule (at nixieclock/nixies.us).
+
+I started on the schematic by placing down all 6 tubes.
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTU4MiwicHVyIjoiYmxvYl9pZCJ9fQ==--36c5be74b7f5afed9146c1ed26e2000a937396b7/image.png)
+
+As I previously discussed, I want use the HV5122 series of controller, However I have slight sourcing issues.
+[LCSC](https://www.lcsc.com/search?q=HV5122&s_z=n_HV5122) list 2 options, but they are both out of stock and cost $15+.
+[Digikey](https://www.digikey.co.uk/en/products/filter/logic/shift-registers/712?s=N4IgTCBcDaIBIDUCsBGMEC6BfIA) have them in stock but they cost 5 GBP, Plus the flatrate 12 GBP for shipping (as I wouldn't be able to justify shipping the rest of the BOM from them) for a total of 17GBP ($17.46).
+And [Mouser](https://www.mouser.co.uk/ProductDetail/689-HV5122PJ-G) have it for $27.32 including shipping
+
+However, after reading the datasheet some more, I have realised that using this chip would also introduce more complexity as
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTU4MywicHVyIjoiYmxvYl9pZCJ9fQ==--d16545ae2dc239e6ae7defea72172808c4594294/image.png)
+
+Which means I also need a level shifter on the serial inputs. I chose to use the Digikey footprint/symbol for the HV5122
+
+With the HV5122's in place, the schematic looks like this:
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTU4NSwicHVyIjoiYmxvYl9pZCJ9fQ==--38ea3973e9c134b1bd1c08c1fb48e3657e1ef06b/image.png)
+
+# Level Shifter,
+I initially looked at the 74LVC125, however quickly realized that it can't shift up to 12v.
+
+I'm pausing my work here while I wait for someone to help me find a volta
+
+
+  
+
