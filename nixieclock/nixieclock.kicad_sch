@@ -52,6 +52,48 @@
 		)
 	)
 	(sheet
+		(at 83.82 12.7)
+		(size 34.29 22.86)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "e51fdc2b-50e0-436d-9078-77dd81021c3e")
+		(property "Sheetname" "Tubes"
+			(at 83.82 11.9884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "tubes.kicad_sch"
+			(at 83.82 36.1446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "nixieclock"
+				(path "/36f98e0b-03c8-47d1-9b6f-a29babd2cb0f"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 12.7 12.7)
 		(size 33.02 22.86)
 		(exclude_from_sim no)

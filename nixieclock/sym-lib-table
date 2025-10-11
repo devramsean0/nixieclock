@@ -1,4 +1,6 @@
 (sym_lib_table
   (version 7)
   (lib (name "lcsc")(type "KiCad")(uri "${KIPRJMOD}/lcsc.kicad_sym")(options "")(descr ""))
+  (lib (name "nixies-us")(type "Legacy")(uri "${KIPRJMOD}/nixies.us/nixies-us.lib")(options "")(descr ""))
+  (lib (name "HV5122")(type "KiCad")(uri "${KIPRJMOD}/HV5122.kicad_sym")(options "")(descr ""))
 )

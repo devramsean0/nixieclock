@@ -1,0 +1,3 @@
+[submodule "nixieclock/nixies.us"]
+	path = nixieclock/nixies.us
+	url = https://github.com/judge2005/Eagle-and-KiCAD-Nixie-Libs.git
